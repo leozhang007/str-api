@@ -1,0 +1,59 @@
+{
+  "kind": "singleType",
+  "collectionName": "configurations",
+  "info": {
+    "name": "configuration"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "fontColor": {
+      "type": "string"
+    },
+    "backgroundColorLeft": {
+      "type": "string"
+    },
+    "backgroundColorRight": {
+      "type": "string"
+    },
+    "githubUsername": {
+      "type": "string"
+    },
+    "blogTitle": {
+      "type": "string"
+    },
+    "blogDescribe": {
+      "type": "string"
+    },
+    "htmlTitle": {
+      "type": "string"
+    },
+    "audioUrl": {
+      "type": "string"
+    },
+    "useBackgroundImage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "audioAutoPlay": {
+      "type": "boolean",
+      "default": false,
+      "required": true,
+      "unique": true
+    },
+    "mini": {
+      "type": "boolean",
+      "default": false,
+      "required": true,
+      "unique": true
+    }
+  }
+}
